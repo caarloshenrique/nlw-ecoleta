@@ -17,6 +17,19 @@ O projeto foi feito utilizando as seguintes tecnologias:
 - [Axios](https://github.com/axios/axios)
 {...}
 
+## :fire: Executando a aplicação
+
+### :bug: Back-end
+#### Configuração
+```
+$ cd ecoleta-api
+$ npm install
+```
+#### Execução
+```
+$ npm run dev
+```
+
 ## :page_facing_up: Licença 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
 
