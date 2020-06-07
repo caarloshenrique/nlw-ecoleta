@@ -11,6 +11,7 @@ O projeto foi feito utilizando as seguintes tecnologias:
 - [SQLite](https://www.sqlite.org/index.html)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ReactJS](https://reactjs.org/)
+- [Expo](https://expo.io/)
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [Axios](https://github.com/axios/axios)
