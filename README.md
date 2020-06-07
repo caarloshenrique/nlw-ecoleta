@@ -24,6 +24,8 @@ O projeto foi feito utilizando as seguintes tecnologias:
 ```
 $ cd ecoleta-api
 $ npm install
+$ npm run knex:migrate
+$ npm run knex:seed
 ```
 #### Execução
 ```
