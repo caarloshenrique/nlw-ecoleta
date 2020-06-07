@@ -10,6 +10,7 @@ O projeto foi feito utilizando as seguintes tecnologias:
 - [Celebrate](https://www.npmjs.com/package/celebrate)
 - [SQLite](https://www.sqlite.org/index.html)
 - [TypeScript](https://www.typescriptlang.org/)
+- [ReactJS](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [Axios](https://github.com/axios/axios)
