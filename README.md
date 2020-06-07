@@ -9,6 +9,7 @@ O projeto foi feito utilizando as seguintes tecnologias:
 - [ExpressJS](https://expressjs.com/pt-br/)
 - [Celebrate](https://www.npmjs.com/package/celebrate)
 - [SQLite](https://www.sqlite.org/index.html)
+- [KnexJS](http://knexjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ReactJS](https://reactjs.org/)
 - [Expo](https://expo.io/)
