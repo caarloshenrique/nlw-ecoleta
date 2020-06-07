@@ -12,6 +12,7 @@ O projeto foi feito utilizando as seguintes tecnologias:
 - [KnexJS](http://knexjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ReactJS](https://reactjs.org/)
+- [LeafletJS](https://leafletjs.com/)
 - [Expo](https://expo.io/)
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
