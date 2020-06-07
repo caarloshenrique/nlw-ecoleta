@@ -7,6 +7,8 @@ O projeto foi feito utilizando as seguintes tecnologias:
 
 - [NodeJS](https://nodejs.org/en/)
 - [ExpressJS](https://expressjs.com/pt-br/)
+- [Celebrate](https://www.npmjs.com/package/celebrate)
+- [SQLite](https://www.sqlite.org/index.html)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
