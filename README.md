@@ -19,6 +19,11 @@ O projeto foi feito utilizando as seguintes tecnologias:
 - [Axios](https://github.com/axios/axios)
 {...}
 
+## :clipboard: Pré-requisitos
+
+- [NodeJS LTS (ou superior)](https://nodejs.org/en/)
+- [Expo](https://expo.io/)
+
 ## :fire: Executando a aplicação
 
 ### :bug: Back-end
