@@ -4,9 +4,9 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import {
   View,
   StyleSheet,
-  TouchableOpacity,
-  Image,
   Text,
+  Image,
+  TouchableOpacity,
   SafeAreaView,
   Linking,
 } from "react-native";
@@ -42,22 +42,18 @@ const Detail = () => {
   const routeParams = route.params as Params;
 
   useEffect(() => {
-    async function loadPoint() {
-      const response = await api.get(`/points/${routeParams.point_id}`);
-
+    api.get(`points/${routeParams.point_id}`).then((response) => {
       setData(response.data);
-    }
-
-    loadPoint();
+    });
   }, []);
 
   function handleNavigateBack() {
     navigation.goBack();
   }
 
-  function handleWhatsApp() {
+  function handleWhatsapp() {
     Linking.openURL(
-      `whatsapp://send?phone=${data.point.whatsapp}&text=Tenho interesse na coleta de resíduos`
+      `whatsapp://send?phone=${data.point.whatsapp}&text=Tenho interesse sobre coleta de resíduos`
     );
   }
 
@@ -78,12 +74,12 @@ const Detail = () => {
         <TouchableOpacity onPress={handleNavigateBack}>
           <Icon name="arrow-left" size={20} color="#34cb79" />
         </TouchableOpacity>
+
         <Image
           style={styles.pointImage}
-          source={{
-            uri: data.point.image_url,
-          }}
+          source={{ uri: data.point.image_url }}
         />
+
         <Text style={styles.pointName}>{data.point.name}</Text>
         <Text style={styles.pointItems}>
           {data.items.map((item) => item.title).join(", ")}
@@ -97,9 +93,9 @@ const Detail = () => {
         </View>
       </View>
       <View style={styles.footer}>
-        <RectButton style={styles.button} onPress={handleWhatsApp}>
+        <RectButton style={styles.button} onPress={handleWhatsapp}>
           <FontAwesome name="whatsapp" size={20} color="#FFF" />
-          <Text style={styles.buttonText}>WhatsApp</Text>
+          <Text style={styles.buttonText}>Whatsapp</Text>
         </RectButton>
 
         <RectButton style={styles.button} onPress={handleComposeMail}>
@@ -162,7 +158,6 @@ const styles = StyleSheet.create({
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: "#999",
     paddingVertical: 20,
-    paddingBottom: 0,
     paddingHorizontal: 32,
     flexDirection: "row",
     justifyContent: "space-between",

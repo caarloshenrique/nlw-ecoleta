@@ -3,9 +3,9 @@ import { Feather as Icon } from "@expo/vector-icons";
 import {
   View,
   ImageBackground,
+  Text,
   Image,
   StyleSheet,
-  Text,
   TextInput,
   KeyboardAvoidingView,
   Platform,
@@ -20,7 +20,10 @@ const Home = () => {
   const navigation = useNavigation();
 
   function handleNavigateToPoints() {
-    navigation.navigate("Points");
+    navigation.navigate("Points", {
+      uf,
+      city,
+    });
   }
 
   return (
@@ -49,13 +52,14 @@ const Home = () => {
         <View style={styles.footer}>
           <TextInput
             style={styles.input}
+            placeholder="Digite a UF"
             value={uf}
-            onChangeText={setUf}
             maxLength={2}
             autoCapitalize="characters"
             autoCorrect={false}
-            placeholder="Digite a UF"
+            onChangeText={setUf}
           />
+
           <TextInput
             style={styles.input}
             placeholder="Digite a cidade"
@@ -63,6 +67,7 @@ const Home = () => {
             autoCorrect={false}
             onChangeText={setCity}
           />
+
           <RectButton style={styles.button} onPress={handleNavigateToPoints}>
             <View style={styles.buttonIcon}>
               <Text>

@@ -6,9 +6,9 @@ import {
   View,
   Text,
   StyleSheet,
+  Image,
   TouchableOpacity,
   ScrollView,
-  Image,
   Alert,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
@@ -47,7 +47,6 @@ const Points = () => {
   ]);
 
   const navigation = useNavigation();
-
   const route = useRoute();
 
   const routeParams = route.params as Params;
@@ -58,23 +57,23 @@ const Points = () => {
 
       if (status !== "granted") {
         Alert.alert(
-          "Ooooops...",
+          "Oooops...",
           "Precisamos de sua permissão para obter a localização"
         );
         return;
       }
 
-      const location = await Location.getCurrentPositionAsync({
-        enableHighAccuracy: true,
-      });
+      const location = await Location.getCurrentPositionAsync();
 
       const { latitude, longitude } = location.coords;
+
+      console.log(latitude, longitude);
 
       setInitialPosition([latitude, longitude]);
     }
 
     loadPosition();
-  });
+  }, []);
 
   useEffect(() => {
     api.get("items").then((response) => {
@@ -83,19 +82,17 @@ const Points = () => {
   }, []);
 
   useEffect(() => {
-    async function loadPoints() {
-      const response = await api.get("/points", {
+    api
+      .get("points", {
         params: {
           city: routeParams.city,
           uf: routeParams.uf,
           items: selectedItems,
         },
+      })
+      .then((response) => {
+        setPoints(response.data);
       });
-
-      setPoints(response.data);
-    }
-
-    loadPoints();
   }, [selectedItems]);
 
   function handleNavigateBack() {
@@ -125,7 +122,7 @@ const Points = () => {
           <Icon name="arrow-left" size={20} color="#34cb79" />
         </TouchableOpacity>
 
-        <Text style={styles.title}>Bem-vindo</Text>
+        <Text style={styles.title}>Bem vindo.</Text>
         <Text style={styles.description}>
           Encontre no mapa um ponto de coleta.
         </Text>
@@ -154,9 +151,7 @@ const Points = () => {
                   <View style={styles.mapMarkerContainer}>
                     <Image
                       style={styles.mapMarkerImage}
-                      source={{
-                        uri: point.image_url,
-                      }}
+                      source={{ uri: point.image_url }}
                     />
                     <Text style={styles.mapMarkerTitle}>{point.name}</Text>
                   </View>

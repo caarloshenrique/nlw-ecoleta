@@ -68,33 +68,29 @@ const CreatePoint = () => {
   }, []);
 
   useEffect(() => {
-    async function loadUfs() {
-      const response = await axios.get<IBGEUFResponse[]>(
+    axios
+      .get<IBGEUFResponse[]>(
         "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
-      );
+      )
+      .then((response) => {
+        const ufInitials = response.data.map((uf) => uf.sigla);
 
-      const ufInitials = response.data.map((uf) => uf.sigla);
-
-      setUfs(ufInitials);
-    }
-
-    loadUfs();
+        setUfs(ufInitials);
+      });
   }, []);
 
   useEffect(() => {
-    async function loadCities() {
-      if (selectedUf === "0") return;
+    if (selectedUf === "0") return;
 
-      const response = await axios.get<IBGECityResponse[]>(
+    axios
+      .get<IBGECityResponse[]>(
         `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedUf}/municipios`
-      );
+      )
+      .then((response) => {
+        const cityNames = response.data.map((city) => city.nome);
 
-      const cityNames = response.data.map((city) => city.nome);
-
-      setCities(cityNames);
-    }
-
-    loadCities();
+        setCities(cityNames);
+      });
   }, [selectedUf]);
 
   function handleSelectUf(event: ChangeEvent<HTMLSelectElement>) {
