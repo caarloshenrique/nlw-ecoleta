@@ -1,5 +1,67 @@
 # next-level-week-ecoleta
-E-coleta é um projeto desenvolvido com base na semana internacional do meio ambiente. O objetivo é conectar pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha etc.
+:recycle: Ecoleta é um projeto desenvolvido com base na semana internacional do meio ambiente. O objetivo é conectar pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha etc.
+
+## :rocket: Tecnologias utilizadas
+
+O projeto foi feito utilizando as seguintes tecnologias:
+
+- [NodeJS](https://nodejs.org/en/)
+- [ExpressJS](https://expressjs.com/pt-br/)
+- [Celebrate](https://www.npmjs.com/package/celebrate)
+- [SQLite](https://www.sqlite.org/index.html)
+- [KnexJS](http://knexjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ReactJS](https://reactjs.org/)
+- [LeafletJS](https://leafletjs.com/)
+- [Expo](https://expo.io/)
+- [React Native](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [Axios](https://github.com/axios/axios)
+{...}
+
+## :clipboard: Pré-requisitos
+
+- [NodeJS LTS (ou superior)](https://nodejs.org/en/)
+- [Expo](https://expo.io/)
+
+## :fire: Executando a aplicação
+
+### :bug: Back-end
+#### Configuração
+```
+$ cd ecoleta-api
+$ npm install
+$ npm run knex:migrate
+$ npm run knex:seed
+```
+#### Execução
+```
+$ npm run dev
+```
+
+### :cyclone: Front-end
+#### Configuração
+
+```
+$ cd ecoleta-app
+$ npm install
+```
+#### Execução
+```
+$ npm start
+```
+
+### :iphone: Mobile
+#### Configuração
+
+```
+$ cd ecoleta-mobile
+$ npm install
+```
+#### Execução
+```
+$ expo start
+```
 
 ## :page_facing_up: Licença 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
