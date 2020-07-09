@@ -1,4 +1,4 @@
-# next-level-week-ecoleta
+# nlw-ecoleta
 :recycle: Ecoleta é um projeto desenvolvido com base na semana internacional do meio ambiente. O objetivo é conectar pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha etc.
 
 ## :rocket: Tecnologias utilizadas
