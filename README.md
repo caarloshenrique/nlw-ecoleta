@@ -63,6 +63,22 @@ $ npm install
 $ expo start
 ```
 
+## :iphone: Interfaces
+
+### :bust_in_silhouette: Autenticação e Cadastro
+
+<p align="center">
+    <img width="300" height="600" src="/ecoleta-app/src/assets/signin.png">
+    <img width="300" height="600" src="/ecoleta-app/src/assets/signup.png">
+</p>
+
+### :round_pushpin: Mapa, Detalhes, Edição e Exclusão
+
+<p align="center">
+    <img width="300" height="600" src="/ecoleta-app/src/assets/home.png">
+    <img width="300" height="600" src="/ecoleta-app/src/assets/detail.png">
+</p>
+
 ## :page_facing_up: Licença 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
 
